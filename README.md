@@ -1,2 +1,5 @@
 # math4610
-Just a check
+This repository contains the projects and solutions to the homework for math 4610.
+
+##Table of Contents
+* Task One Solutions
