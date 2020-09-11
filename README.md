@@ -2,5 +2,4 @@
 This repository contains the projects and solutions to the homework for math 4610.
 
 ## Table of Contents
-* [Task One Solutions](https://github.com/gebisthefallenhero/math4610/tree/master/task_sheets/task_sheet_1)
-* [Task One Solutions round 2](task_sheets/task_sheet_1/Task1_Solutions.md)
+* [Task One Solutions](task_sheets/task_sheet_1/Task1_Solutions.md)
