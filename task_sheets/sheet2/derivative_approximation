@@ -2,11 +2,11 @@ from math import cos
 
 
 def cosApprox(x,h):
-	return (cos(x+h) - 2 * cos(x) + cos(x-h)) / h
+	return (cos(x+h) - 2 * cos(x) + cos(x-h)) / (h ** 2)
 
 h = [1,.5]
 count = 1
-while count != 16:
+while count != 17:
 	h.append(1 / 10 ** count)
 	count += 1
 
