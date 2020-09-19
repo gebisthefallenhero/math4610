@@ -4,11 +4,11 @@
 
 For the progam for task 1 see the file HelloWorld.py. Code is below:
 
-'''
+```
 
 print("Hello World")
 
-'''
+```
 
 
 ### Task2
