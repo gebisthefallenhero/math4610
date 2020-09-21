@@ -17,7 +17,7 @@ The link for the table of contents is in the readme and the software manual as w
 
 ### Task3
 
-Task 3 table of contents is this document
+The table of contents is this document and I have done git pulls successfully.
 
 ### Task 4
 
