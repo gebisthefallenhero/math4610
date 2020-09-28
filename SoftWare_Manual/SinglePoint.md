@@ -47,7 +47,7 @@ The first value (24) is the number of binary digits that define the machine epsi
 decimal version of the same value. The number of decimal digits that can be represented is roughly eight (E-08 on the
 end of the second value).
 
-**Implementation/Code:** The following is the code for smaceps()
+**Implementation/Code:** The following is the code for calcSinglePoint()
 
     public static float calcSinglePoint(){
         float one = 1;
