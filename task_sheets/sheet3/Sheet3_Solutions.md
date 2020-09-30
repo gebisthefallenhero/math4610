@@ -1,8 +1,8 @@
 # Solutions For Task Sheet 3
 
-#Tasks 1 and 2
+### Tasks 1 and 2
 
-For the program for tasks 1 and 2 see the file [derivative approximation](../sheet2/derivative_approximation.py). Below is the table of erro magnitudes. The loglog plot was created by matplotlib's loglog function, and therfore printing log differences was not needed.
+For the program for tasks 1 and 2 see the file [derivative approximation](../sheet2/derivative_approximation.py). Below is the table of error magnitudes. The loglog plot was created by matplotlib's loglog function, and therfore printing log differences was not needed.
 
 | h        | Error Magnitude |
 |---------|------------------------------|
@@ -45,5 +45,12 @@ And for the double point we get
 ```
 The number of binary digits that can be obtained for double point is 53.0
 The smallest number this corresponds to is 1.1102230246251565E-16
+
 ```
+### Task 6
+One advantage of creating a shared library is that it saves memory. It allows you to save space on your computer by only needing one copy of each routine. Another advantage is that they can make complex code easier to read by compartmentalizing certain functions. A disadvantage is that they make version control harder. When the library updates if it is not backwards compatible then it might cause the code to crash when it updates.
+
+Here are links for sites.
+(https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html)[https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html]
+(https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear)[https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear]
 
