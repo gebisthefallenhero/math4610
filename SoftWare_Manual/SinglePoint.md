@@ -4,12 +4,11 @@
 
 **Author:** Manuel Santana
 
-**Language** Java. This can be compiled and ran using JDK 13.01 or higher.
+**Language:** Python. Can be run with python 3.8 or higher
 
 For example,
 
-    java SinglePoint
-
+	python SinglePoint.py
 
 
 **Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
@@ -24,17 +23,14 @@ computer being queried.
 
 **Usage/Example:**
 
-By using the function calcSinglePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
+By using the function SinglePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
 Here is an example main class
 
 ```
 
-public static void main(String[] args){
-        float numBinaryDigits = calcSinglePoint();
-        System.out.println("The number of binary digits that can be printed is " + calcSinglePoint());
-        System.out.println("The smallest number this corresponds to is " + Math.pow(2,-numBinaryDigits));
-    }
-
+if __name__ == "__main__":
+    print(f"The number of binary digits that can be printed is {singlePoint()}")
+    print(f"The smallest number this corresponds to is {2 ** -singlePoint()}")
 ```
 
 
@@ -49,21 +45,19 @@ end of the second value).
 
 **Implementation/Code:** The following is the code for calcSinglePoint()
 
-    public static float calcSinglePoint(){
-        float one = 1;
-        float seps = 1;
-        float appone = one + seps;
-        for( int ipow = 1; ipow <= 1000; ipow++){
+```
+def singlePoint():
+    one = float32(1.0)
+    seps = float32(1.0)
+    appone = float32(1.0)
+    for ipow in range(1, 1000):
+        seps = seps / 2
+        seps = float32(seps)
+        appone = one + seps
+        if (abs(appone) == 1):
+            return ipow
+    print("Didn't make it after 1000 Iterations")
+```
 
-            seps = seps / 2;
-            appone = 1 + seps;
-            if (Math.abs(appone) == 1){
-                return ipow;
-            }
-        }
-        System.out.print("Did not make it after 1000 iterations");
-        // Return a zero if it did not make the approximation.
-	return 0;
-    }
 **Last Modified:** September/2020
 

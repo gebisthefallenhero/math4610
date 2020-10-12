@@ -4,12 +4,11 @@
 
 **Author:** Manuel Santana
 
-**Language** Java. This can be compiled and ran using JDK 13.01 or higher.
+**Language** Python. This can be ran with python 3.8 or higher with a numpy dependance
 
 For example,
 
-    java DoublePoint.java 
-
+	python DoublePoint.py
 
 **Description/Purpose:** This routine will compute the double precision value for the machine epsilon or the number of digits
 in the representation of real numbers in single precision. This is a routine for analyzing the behavior of any computer. This
@@ -23,15 +22,14 @@ computer being queried.
 
 **Usage/Example:**
 
-By using the function calcDoublePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
+By using the function DoublePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
 Here is an example main class
 
 ```
-    public static void main(String[] args){
-        double numBinaryDigits = calcDoublePoint();
-        System.out.println("The number of binary digits that can be printed is " + calcDoublePoint());
-        System.out.println("The smallest number this corresponds to is " + Math.pow(2,-numBinaryDigits));
-    }
+
+if __name__ == "__main__":
+    print(f"The number of binary digits that can be printed is {doublePoint()}")
+    print(f"The smallest number this corresponds to is {2 ** -doublePoint()}")
 
 ```
 
@@ -47,25 +45,19 @@ end of the second value).
 
 **Implementation/Code:** The following is the code for calcDoublePoint()
 
-public class DoublePoint {
-    /*
-    Returns the number of binary digits that can be printed from single point percision.
-     */
-    public static float calcDoublePoint(){
-        double one = 1;
-        double seps = 1;
-        double appone = one + seps;
-        for( int ipow = 1; ipow <= 1000; ipow++){
+```
+def singlePoint():
+    one = float32(1.0)
+    seps = float32(1.0)
+    appone = float32(1.0)
+    for ipow in range(1, 1000):
+        seps = seps / 2
+        seps = float32(seps)
+        appone = one + seps
+        if (abs(appone) == 1):
+            return ipow
+    print("Didn't make it after 1000 Iterations")
 
-            seps = seps / 2;
-            appone = 1 + seps;
-            if (Math.abs(appone) == 1){
-                return ipow;
-            }
-        }
-        System.out.print("Did not make it after 1000 iterations");
-        return 0;
-    }
-
+```
 **Last Modified:** September/2020
 
