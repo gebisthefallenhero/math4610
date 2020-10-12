@@ -1,21 +1,28 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from sys import argv
 
-def plotFunction(f):
-    figure = plt.figure()
-    figure.xlabel = "x Axis"
-    figure.ylabel = "y Axis"
-    figure.plot(f)
+def plotFunction(fList, low = -10, high = 10):
+    linspace = np.linspace(low, high)
 
+    for f in fList:
+        functVal = []
+        for val in linspace:
+            x = val
+            functVal.append(eval(f))
+        plt.plot(linspace, functVal)
+    plt.legend(argv)
+    plt.xlabel("x axis")
+    plt.ylabel("y axis")
+    plt.show()
 
 
 
 if __name__ == "__main__":
     if len(argv) == 0:
         print("No functions passed in")
-
     else:
-        figure = plt.figure()
-        for arg in argv:
-            print(arg)
-            figure.plot(eval(arg))
+        argv = argv[1:]
+        plotFunction(argv)
+
+
