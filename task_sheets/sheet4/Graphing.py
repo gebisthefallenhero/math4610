@@ -16,8 +16,6 @@ def plotFunction(fList, low = -10, high = 10):
     plt.ylabel("y axis")
     plt.show()
 
-
-
 if __name__ == "__main__":
     if len(argv) == 0:
         print("No functions passed in")
