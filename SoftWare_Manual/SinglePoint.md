@@ -4,11 +4,11 @@
 
 **Author:** Manuel Santana
 
-**Language:** Python. Can be run with python 3.8 or higher
 
 For example,
 
-	python SinglePoint.py
+    java SinglePoint
+
 
 
 **Description/Purpose:** This routine will compute the single precision value for the machine epsilon or the number of digits
@@ -23,7 +23,7 @@ computer being queried.
 
 **Usage/Example:**
 
-By using the function SinglePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
+By using the function calcSinglePoint() you will print out the number of binary digits that can be represented on the computer using single point precision. 
 Here is an example main class
 
 ```
@@ -57,7 +57,6 @@ def singlePoint():
         if (abs(appone) == 1):
             return ipow
     print("Didn't make it after 1000 Iterations")
+   
 ```
-
-**Last Modified:** September/2020
-
+**Last Modified:** October/2020 
