@@ -7,7 +7,7 @@ See the files [AbsError.py](AbsError.py) and [RelError.py](RelError.py)
 See the file [Graphing.py](Graphing.py)
 
 ### Task 3 - 4: 
-See the file [FixedPoint.py](FixedPoint.py)
+See the file [FixedPoint.py](FixedPoint.py). Inorder to get this to converge to a root a took the derivative of the function and choose a point where the derivative stayed positive for the initial guess, and then experimented with differentvalues of epsilon. Eventually the one that ended up working is epslion = .001 converged to the root -.805 using the inital guess of .001.
 
 ## Task 5:
 See the file [Bisection.py](FixedPoint.py)
