@@ -47,6 +47,9 @@ The number of binary digits that can be obtained for double point is 53.0
 The smallest number this corresponds to is 1.1102230246251565E-16
 
 ```
+### Task 5
+My python source code is in a folder called lib in the root directory of this repository.
+
 ### Task 6
 One advantage of creating a shared library is that it saves memory. It allows you to save space on your computer by only needing one copy of each routine. Another advantage is that they can make complex code easier to read by compartmentalizing certain functions. A disadvantage is that they make version control harder. When the library updates if it is not backwards compatible then it might cause the code to crash when it updates.
 
