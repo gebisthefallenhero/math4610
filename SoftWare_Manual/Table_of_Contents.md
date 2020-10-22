@@ -11,3 +11,4 @@
 * [Bisection.md](Bisection.md) Uses the bisection method to find the root of a function.
 * [NewtonsMethod.md](NewtonsMethod.md) Uses newtons method to find the root of a function.
 * [SecantMethod.md](SecantMethod.md) Uses the secant method to find the root of a function.
+* [HybridMethod.md](HybridMethod.md) Uses the a bisection-newton method to find the root of a function.
