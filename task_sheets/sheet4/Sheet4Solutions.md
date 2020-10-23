@@ -1,5 +1,8 @@
 # Sheet 4 Solutions
 
+# Software Manual Link
+Here is the link for the [software manual](../../SoftWare_Manual/Table_of_Contents.md)
+
 ### Task 1:
 See the files [AbsError.py](AbsError.py) and [RelError.py](RelError.py)
 

@@ -32,7 +32,7 @@ Here it a loglog graph of the above table.
 The way that can be computationally verified that this is second order acurate is seen in the graph. In stable portion of the graph there the slope of the line loops to be about -2, which is what we would expect for something second order acurate. The code begins to fail at about h = .0001 due to  finite precision in the number representation and/or finite precision of arithmetic.
 
 ### Task 3
-The code is found in the files [SinglePoint.java](src/SinglePoint.java) and [DoublePoint.java](src/DoublePoint.java)
+The code is found in the files [SinglePoint.py](src/SinglePoint.py) and [DoublePoint.py](src/DoublePoint.py)
 Here is the comparision. The output for the single point is 
 
 ```
@@ -48,12 +48,12 @@ The smallest number this corresponds to is 1.1102230246251565E-16
 
 ```
 ### Task 5
-My python source code is in a folder called lib in the root directory of this repository.
+My python source code is in a folder called lib in the root directory of this repository. It can be found [here](../../lib)
 
 ### Task 6
 One advantage of creating a shared library is that it saves memory. It allows you to save space on your computer by only needing one copy of each routine. Another advantage is that they can make complex code easier to read by compartmentalizing certain functions. A disadvantage is that they make version control harder. When the library updates if it is not backwards compatible then it might cause the code to crash when it updates.
 
 Here are links for sites.
-(https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html)[https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html]
-(https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear)[https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear]
+[https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html](https://docs.oracle.com/cd/E19205-01/819-5267/bkamn/index.html)
+[https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear](https://stackoverflow.com/questions/1082047/pros-and-cons-of-using-shared-library-vs-fully-encapsulated-ear)
 

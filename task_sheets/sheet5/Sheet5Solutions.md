@@ -1,7 +1,7 @@
-# Solutions for Task Sheet 3
+# Solutions for Task Sheet 5 
 
 ### Task 1 - 2
-See the software manual as well as the files [NewtonsMethod.py](NewtonsMethod.py) and [SecantMethod.py](SecantMethod.py)
+See the [software manual](../../SoftWare_Manual/Table_of_Contents.md) as well as the files [NewtonsMethod.py](NewtonsMethod.py) and [SecantMethod.py](SecantMethod.py)
 
 ### Task 3 - 4
 Lets start with the Newtons Method Convergence:
@@ -20,6 +20,9 @@ See the software manual as well as the file [HybridMethod.py](HybridMethod.py)
 Newtons method seems to be the gold standard, but it seems you need the perfect equation to make it work. Though most functions have second derivatives it may not be possible to analytically find one, which is a big con of newtons method. The next best is the secant method, but the biggest con it faces is that you need to know good starting values or it will diverge. Finally the bisection method is the tried and true function that works most of the time as long as your know that your function is continuous.
 
 Sources
-https://www.lehigh.edu/~ineng2/clipper/notes/newtons.htm
-https://www.lehigh.edu/~ineng2/clipper/notes/secant.htm
-https://mmiranda96blog.wordpress.com/2017/03/08/root-finding-method-comparison/
+[https://www.lehigh.edu/~ineng2/clipper/notes/newtons.htm](
+https://www.lehigh.edu/~ineng2/clipper/notes/newtons.htm)
+[https://www.lehigh.edu/~ineng2/clipper/notes/secant.htm](
+https://www.lehigh.edu/~ineng2/clipper/notes/secant.htm)
+[https://mmiranda96blog.wordpress.com/2017/03/08/root-finding-method-comparison/](
+https://mmiranda96blog.wordpress.com/2017/03/08/root-finding-method-comparison/)
