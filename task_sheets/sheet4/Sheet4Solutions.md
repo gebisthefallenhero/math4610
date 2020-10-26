@@ -10,7 +10,7 @@ See the files [AbsError.py](AbsError.py) and [RelError.py](RelError.py)
 See the file [Graphing.py](Graphing.py)
 
 ### Task 3 - 4: 
-See the file [FixedPoint.py](FixedPoint.py). Inorder to get this to converge to a root a took the derivative of the function and choose a point where the derivative stayed positive for the initial guess, and then experimented with differentvalues of epsilon. Eventually the one that ended up working is epslion = .001 converged to the root -.805 using the inital guess of .001.
+See the file [FixedPoint.py](FixedPoint.py). Inorder to get this to converge to a root a took the derivative of the function and choose a point where the derivative stayed positive for the initial guess. This led to needing an epsilon of at least .01 in order to get convergence near 0. After some experiementing if we use an inital gues of .01 and and epsilon of -.01 we were able to find that the root is zero. This led also to updating the function to be able to pass in different values of epsilon.
 
 ### Task 5:
 See the file [Bisection.py](Bisection.py)
