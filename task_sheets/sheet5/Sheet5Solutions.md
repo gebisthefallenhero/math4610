@@ -4,13 +4,14 @@
 See the [software manual](../../SoftWare_Manual/Table_of_Contents.md) as well as the files [NewtonsMethod.py](NewtonsMethod.py) and [SecantMethod.py](SecantMethod.py)
 
 ### Task 3 - 4
+See the file [LinearRegression.py](LinearRegression.py) to see the code for the linear regression.
 Lets start with the Newtons Method Convergence:
 ![NewtonsMethodConvergence.png]
-This is a loglog plot of the error and the tolerance becomes smaller and smaller. Notice that a tolerance of 10^-3 leads to an error of about 10^-7. That is a good show of the quadratic convergence.
+This is a loglog plot of the error and the tolerance becomes smaller and smaller. Notice that a tolerance of 10^-3 leads to an error of about 10^-7. That is a good show of the quadratic convergence. Doing a linear regression on these error terms gives a value of 1.61677 for r.
 
 Now lets look at the Secant Method.
 ![SecantMethodConvergence.png]
-Notive how on this loglog plot of the error when the tolerance is about 10^-3 then the error is about 10^-6. This is a good sign of the near quadratic convergnce. In both plots you see that the error goes to zero. That is because the approximation for the root of the function used as the "true" value means that at somepoint both approximations equal each other.
+Notive how on this loglog plot of the error when the tolerance is about 10^-3 then the error is about 10^-6. This is a good sign of the near quadratic convergnce. In both plots you see that the error goes to zero. That is because the approximation for the root of the function used as the "true" value means that at somepoint both approximations equal each other. Doint a linear regression on these error terms gives a value of 1.2073 for r.
 
 
 ### Task 5
