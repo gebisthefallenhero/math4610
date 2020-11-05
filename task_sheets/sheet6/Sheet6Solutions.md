@@ -20,16 +20,41 @@ One interesting thing while running this code what that a bad guess lead to a di
 I was duped. The newton's method crashed with both guesses. This is because the derivative at -5 and 6 is very close to zero, and therefore led to a division byzero error.
 
 ### Task 3
-The first step was to deal with the fact that the interval [-5,6] was not guaranteed to bracked a root by the intermedite value theorem. In order to deal with this the modified method added this block of code
-```
-if f(a)*f(b) > 0:
-    if numIter < maxIter:
-      #Try the method again but moving b closer to the origin
-       return modifiedHybridMethod(a,b - .1,f,f_p,numIter=numIter + 1)
-```
-What this code does is recursively try to find the root again this time moving b slightly closer to the origin. Then each time a root was found if that root was closer to zero than the last one it was saved as the best answer, and passed into the next recusive call. The recurssion ends if a negative b is passed into the code. This works since on that last iteration the best root between a and b at that point will be found, and compared with the current best root. The code output
+For this task the first thing I did was write a wrapper function to find a bracketed root. It looks like this
 
 ```
-The closest root to zero using the modified hybrid method is -0.48361071309741366
+def modifiedHybridMethod(a,b,f,f_p,tol=.001,maxIter=1000, increment=.1):
+    for i in range(maxIter):
+        if f(a) * f(b) < 0:
+            return modifiedHybridMethod2(a,b,f,f_p,tol=tol)
+        b = b - increment
+        a = a + increment
+    print("Did not converge :( ")
+
 ```
-This compares is consistent with the answers in task 1 sincethe code has a root at + or - .4836 and therefor this is the best root.
+This function moves a and b both towards zero and tries to find a bracketed root. Next the logic needed to be changed in the bisection method. It looks like this now.
+
+```
+def bisect2(a,b,mid,f):
+    # The number of iterations needed to decrease by one order of magnitude using the bisection method.
+    ITER_ONE_ORDER_MAG = 4
+    for i in range(ITER_ONE_ORDER_MAG):
+        f_a = f(a)
+        f_mid = f(mid)
+        f_b = f(b)
+        if (f_mid * f_a < 0) and (f_mid * f_b < 0 ):
+             if (mid > 0):
+                 b = mid
+             else:
+                 a = mid
+        if f_mid * f_a < 0:
+            b = mid
+        else:
+            a = mid
+        mid = (a + b) / 2
+    return a,b
+```
+Essentially what this does is it says if given the choice between intervals choose the one that still has zero in it. I will say this is not a fool proof method but it seems to work in this situation. It should be noted that this returned the same root as in task 2.
+
+### Task 4
+For this task all that was needed to be done was to switch the line in the hybrid method using newtons method to a line using the secant method and it gave the same root as in tasks 3 and 2.

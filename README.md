@@ -9,3 +9,4 @@ This repository contains the projects and solutions to the homework for math 461
 * [Task Three Solutions](task_sheets/sheet3/Sheet3_Solutions.md)
 * [Task Four Solutions](task_sheets/sheet4/Sheet4Solutions.md)
 * [Task Five Solutions](task_sheets/sheet5/Sheet5Solutions.md)
+* [Task Six Solutions](task_sheets/sheet6/Sheet6Solutions.md)

@@ -37,6 +37,7 @@ def bisect(a,b,mid,f):
             b = mid
         else:
             a = mid
+        mid = (a + b) / 2
     return a,b
 
 if __name__ == '__main__':
