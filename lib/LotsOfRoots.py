@@ -27,7 +27,6 @@ def modifiedHybridMethod2(a,b,f,f_p,tol=.001,maxIter=1000):
     #Error B is the bisection error
     errorB = tol * 10
     iter = 0
-
     while errorB > tol and iter < maxIter:
         iter += 1
         mid = (a + b) * .5
@@ -60,81 +59,63 @@ def bisect2(a,b,mid,f):
         mid = (a + b) / 2
     return a,b
 
+#Hybrid method using secand to find the root closest to zero.
+def modHybSecMethod(a,b,f,tol=.001,maxIter=1000, increment=.1):
+    for i in range(maxIter):
+        if f(a) * f(b) < 0:
+            return modHybSecMethod2(a,b,f,tol=tol)
+        b = b - increment
+        a = a + increment
+    print("Did not converge :( ")
+
+#Wraped function for the hybrid method to do the actual root finding.
+def modHybSecMethod2(a,b,f,tol=.001,maxIter=1000):
+    if a > b:
+        a,b = b,a
+    # if f(a)*f(b) > 0:
+    #     print('Error: [a b] does not contain a root')
+        # return
+    if f(a) == 0:
+        return a
+    if f(b) == 0:
+        return b
+    #Error B is the bisection error
+    errorB = tol * 10
+    iter = 0
+    while errorB > tol and iter < maxIter:
+        iter += 1
+        mid = (a + b) * .5
+        secantGuess = secantMethod(f,a,b,tol=tol,maxIter = 10)
+        errorS = abs(secantGuess - mid)
+        if errorS < tol:
+            return secantGuess
+        else:
+            a,b = bisect2(a,b,mid,f)
+            if abs(b - a) < tol:
+                return a
 
 
 
 
+def findManyRoots(a,b,f,f_p,numIntervals = 100):
+    stepSize = (abs(a) + abs(b)) / numIntervals
+    xIntervals = [a]
+    # This loop creates the linspace needed to find the intervals.
+    for i in range(numIntervals):
+        xIntervals.append(xIntervals[i] + stepSize)
+    roots = []
+    for i in range(len(xIntervals)):
+        if i == len(xIntervals) - 1:
+            continue
+        a = xIntervals[i]
+        b = xIntervals[i+1]
+        if f(a) * f(b) > 0:
+            continue
+        root = hybridMethod(a,b,f,f_p,tol=.000001)
+        if root != None:
+            roots.append(root)
+    return roots
 
-
-
-# #This modified hybrid method recursively moves the left endpoint towards the orirgin.
-# def modifiedHybridMethod(a,b,f,f_p,tol=.001,maxIter=1000,numIter=0, bestGuess =0):
-#     if (b < 0):
-#         return bestGuess
-#     if a > b:
-#         a,b = b,a
-#     if f(a)*f(b) > 0:
-#         if numIter < maxIter:
-#             #Try the method again but moving b closer to the origin
-#             return modifiedHybridMethod(a,b - .1,f,f_p,numIter=numIter + 1)
-#         print('Error: No Root found in maximum iterations')
-#         return
-#     if f(0) == 0:
-#         return 0
-#     #Error B is the bisection error
-#     errorB = tol * 10
-#     iter = 0
-#     while errorB > tol and iter < maxIter:
-#         iter += 1
-#         mid = (a + b) * .5
-#         newtonsGuess = newtonsMethod(f,f_p,mid,tol=tol)
-#         errorN = abs(newtonsGuess - mid)
-#         if errorN < tol:
-#             #The case where the root actually zero is taken care of above
-#             if bestGuess == 0:
-#                 bestGuess =  newtonsGuess
-#                 break
-#             else:
-#                 if abs(newtonsGuess) < abs(bestGuess):
-#                     bestGuess = newtonsGuess
-#         else:
-#             a,b = bisect2(a,b,mid,f)
-#             mid = (a + b) * .5
-#             newtonsGuess = newtonsMethod(f, f_p, mid, tol=tol)
-#             errorN = abs(newtonsGuess - mid)
-#             if errorN < tol:
-#                 # The case where the root actually zero is taken care of above
-#                 if bestGuess == 0:
-#                     bestGuess = newtonsGuess
-#                     break
-#                 else:
-#                     if abs(newtonsGuess) < abs(bestGuess):
-#                         bestGuess = newtonsGuess
-#             if abs(b - a) < tol:
-#                 if bestGuess == 0:
-#                     bestGuess = a
-#                 else:
-#                     if abs(a) < abs(bestGuess):
-#                         bestGuess = a
-#                 break
-#     return modifiedHybridMethod(a,b -.1,f,f_p,numIter=numIter + 1, bestGuess=bestGuess)
-#
-# def bisect2(a,b,mid,f):
-#     # The number of iterations needed to decrease by one order of magnitude using the bisection method.
-#     ITER_ONE_ORDER_MAG = 4
-#     for i in range(ITER_ONE_ORDER_MAG):
-#         mid = (a + b) / 2
-#         if mid > 0:
-#             b = mid
-#         if mid < 0:
-#             a = mid
-#         # f_a = f(a)
-#         # f_mid = f(mid)
-#         # if f_mid * f_a < 0:
-#         #     b = mid
-#         # else:
-#         #     a = mid
-#     return a,b
 
 
 
@@ -156,4 +137,5 @@ if __name__ == '__main__':
         print("Newton's method failed")
 
     print(f"The closest root to zero using the modified hybrid method is {modifiedHybridMethod(-5,6,function,functionP)}")
-    # print(f"The closet root to zero using the modified secant hybrid method is {modSecHybMethod(-5,6)}")
+    print(f"The closet root to zero using the modified secant hybrid method is {modHybSecMethod(-5,6,function,increment=1)}")
+    print(f"All the roots possible to find are {findManyRoots(-5,6,function,functionP,numIntervals=500)}")

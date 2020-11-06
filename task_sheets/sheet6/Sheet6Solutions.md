@@ -57,4 +57,45 @@ def bisect2(a,b,mid,f):
 Essentially what this does is it says if given the choice between intervals choose the one that still has zero in it. I will say this is not a fool proof method but it seems to work in this situation. It should be noted that this returned the same root as in task 2.
 
 ### Task 4
-For this task all that was needed to be done was to switch the line in the hybrid method using newtons method to a line using the secant method and it gave the same root as in tasks 3 and 2.
+For this task all that was needed to be done was to switch the line in the hybrid method using newtons method to a line using the secant method and it gave the same root as in tasks 3 and 2. Well I shouldn't say all because it also required playing with how a and b were incremented towards the origin. The secant method for what ever reason required a different increment than newtons method to avoid division by zero. For what ever reason some increments caused the function to fail.
+
+### Task 5
+For this task a wrote a new functoin which I will put in here for convenience. The entry for this function can be found in the (software manual)[../../SoftWare_Manual/Table_of_Contents.md]
+
+```
+def findManyRoots(a,b,f,f_p,numIntervals = 100):
+    stepSize = (abs(a) + abs(b)) / numIntervals
+    xIntervals = [a]
+    # This loop creates the linspace needed to find the intervals.
+    for i in range(numIntervals):
+        xIntervals.append(xIntervals[i] + stepSize)
+    roots = []
+    for i in range(len(xIntervals)):
+        if i == len(xIntervals) - 1:
+            continue
+        a = xIntervals[i]
+        b = xIntervals[i+1]
+        if f(a) * f(b) > 0:
+            continue
+        root = hybridMethod(a,b,f,f_p,tol=.000001)
+        if root != None:
+            roots.append(root)
+    return roots
+ ```
+ This function creates a linspace off of a specified number of intervals. It then checks those intervals to see if they have a root by the intermediate value theorem, and then if so they use a hybrid method to caclulate the root. Using this function with 500 subintervals intervals of [-5,6] we get the following.
+
+ ```
+
+All the roots possible to find are [-1.7229456481933667, -1.7051042175293047, -1.3215863037109445, -1.035767242431647, -0.48361069854286604, 0.48361069854290567, 1.0357669372558536, 1.3215861833429055, 1.7051042125203324, 1.7229453430175732
+]
+
+```
+There are 10 roots in total. The first and last two were the most confusing to find since they are so close together.
+
+### Task 6
+The first website I looked at suggested the same of idea of dividing it into many sub intervals. The con of this approach though is that there really isn't a way to know if you got all the roots of your function, but you can have a good guess by making the intervals small enough. Interestingly though there is a lot of research that has gone on even in recent years to find multiple roots, and skimming though on article it seems that some methods have good ways to show just how large the number of subintervals that you need is to be fairly confident that you have found all the roots. The downside to this is that it is much more complecated to understand and implement, and so depending on your need it may be better to just keep making your interval size smaller until you have the roots that you desire.
+
+[https://www.mathworks.com/matlabcentral/answers/391474-bisection-method-multiple-roots](https://www.mathworks.com/matlabcentral/answers/391474-bisection-method-multiple-roots)
+
+[https://www.sciencedirect.com/science/article/pii/S0377042712001045](https://www.sciencedirect.com/science/article/pii/S0377042712001045)
+

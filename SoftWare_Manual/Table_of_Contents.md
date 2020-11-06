@@ -12,3 +12,7 @@
 * [NewtonsMethod.md](NewtonsMethod.md) Uses newtons method to find the root of a function.
 * [SecantMethod.md](SecantMethod.md) Uses the secant method to find the root of a function.
 * [HybridMethod.md](HybridMethod.md) Uses the a bisection-newton method to find the root of a function.
+* [FindManyRoots.md](FindManyRoots.md) Uses a hybrid method to find as many roots as possible on an interval.
+
+### Linear Algebra
+* [LinearRegression.md](LinearRegression.md) Perform a linear regression.
