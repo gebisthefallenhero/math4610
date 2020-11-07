@@ -60,7 +60,7 @@ Essentially what this does is it says if given the choice between intervals choo
 For this task all that was needed to be done was to switch the line in the hybrid method using newtons method to a line using the secant method and it gave the same root as in tasks 3 and 2. Well I shouldn't say all because it also required playing with how a and b were incremented towards the origin. The secant method for what ever reason required a different increment than newtons method to avoid division by zero. For what ever reason some increments caused the function to fail.
 
 ### Task 5
-For this task a wrote a new functoin which I will put in here for convenience. The entry for this function can be found in the (software manual)[../../SoftWare_Manual/Table_of_Contents.md]
+For this task a wrote a new functoin which I will put in here for convenience. The entry for this function can be found in the [software manual](../../SoftWare_Manual/Table_of_Contents.md)
 
 ```
 def findManyRoots(a,b,f,f_p,numIntervals = 100):
