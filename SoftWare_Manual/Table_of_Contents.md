@@ -18,3 +18,5 @@
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.
 * [Transpose.md](Tranpose.md) Transpose a matrix
 * [BackSolve.md](BackSolve.md) Backsolve an upper triangular system of equations.
+* [ForwardSolve.md](ForwardSolve.md) Forward Solve a lower triangular system of equations.
+

@@ -1,10 +1,11 @@
 from NewtonsMethod import newtonsMethod
 
-def hybridMethod(a,b,f,f_p,tol=.001,maxIter=1000):
+def hybridMethod(a,b,f,f_p,tol=.001,maxIter=1000, errorMessage=False):
     if a > b:
         a,b = b,a
     if f(a)*f(b) > 0:
-        print('Error: [a b] does not contain a root')
+        if errorMessage:
+            print('Error: [a b] does not contain a root')
         return
     if f(a) == 0:
         return a

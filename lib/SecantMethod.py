@@ -18,7 +18,6 @@ def secantMethod(f,x_0,x_1,tol=.001,maxIter=1000,errorMessage=False):
         print("Did not converge")
 
 
-
 if __name__ == "__main__":
     f = lambda x: x * exp(3 * x ** 2) - 7 * x
     guess = 1

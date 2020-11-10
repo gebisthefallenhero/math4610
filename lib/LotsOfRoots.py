@@ -97,7 +97,7 @@ def modHybSecMethod2(a,b,f,tol=.001,maxIter=1000):
 
 
 
-def findManyRoots(a,b,f,f_p,numIntervals = 100):
+def findManyRoots(a,b,f,f_p,numIntervals = 100, tol=.0001):
     stepSize = (abs(a) + abs(b)) / numIntervals
     xIntervals = [a]
     # This loop creates the linspace needed to find the intervals.
@@ -111,7 +111,7 @@ def findManyRoots(a,b,f,f_p,numIntervals = 100):
         b = xIntervals[i+1]
         if f(a) * f(b) > 0:
             continue
-        root = hybridMethod(a,b,f,f_p,tol=.000001)
+        root = hybridMethod(a,b,f,f_p,tol=tol)
         if root != None:
             roots.append(root)
     return roots
