@@ -17,7 +17,7 @@
 ### Linear Algebra
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.
 * [MatrixCreator.md](MatrixCreator.md) A suite of routines to create different types of matricies used for testing code.
-* [Transpose.md](Tranpose.md) Transpose a matrix
+* [Transpose.md](Transpose.md) Transpose a matrix
 * [BackSolve.md](BackSolve.md) Backsolve an upper triangular system of equations.
 * [ForwardSolve.md](ForwardSolve.md) Forward Solve a lower triangular system of equations.
 * [RowReduce.md](RowReduce.md) Perform Gaussian elimination on a matrix. No Pivoting Strategies implemented yet.
