@@ -48,7 +48,10 @@ Matix Reduced
 Reduced b vector
 [87, 68.5, 14.295102040816317]
 ```
+### Task 6
+The first thing I looked up is stuff about the condition number. Essentially the condition number helps to know how a small pertubation affects the entire matrix. If the condition number is large, then the matrix is close to singular, and could cause trouble. The other main thing discussed was that even when a matrix is non-singular if it has small pivots then the matrix can appear singular. As talked about in class it is often metioned that a pivoting strategy is needed in this case.
 
+[https://blogs.mathworks.com/cleve/2017/07/17/what-is-the-condition-number-of-a-matrix/](https://blogs.mathworks.com/cleve/2017/07/17/what-is-the-condition-number-of-a-matrix/)
 
-
+[http://ranger.uta.edu/~huber/cse4345/Notes/Linear_Equations.pdf](http://ranger.uta.edu/~huber/cse4345/Notes/Linear_Equations.pdf)
 
