@@ -67,6 +67,30 @@ def diagAsArray(size):
     '''
     return [randint(0,100) for i in range(size)]
 
+def diagDom(size):
+    '''
+    Creates a diagonal domiant random matrix
+    :param size The size of the matrix.
+    :return: The random matrix
+    '''
+    START_VALUE = 0
+    END_VALUE = 20
+    matrix = []
+    #initialize a random matrix
+    for i in range(size):
+        row = []
+        for j in range(size):
+            row.append(randint(START_VALUE,END_VALUE))
+        matrix.append(row)
+    #Force diagonal dominance upon that matrix
+    for i in range(size):
+        sum = 0
+        for j in range(size):
+            if (j != i):
+                sum += matrix[i][j]
+        matrix[i][i] = sum + 1
+    return matrix
+
 
 
 if __name__ == '__main__':
@@ -80,3 +104,5 @@ if __name__ == '__main__':
     printMatrix(diagMat(3))
     print("Diagonal As an Array")
     print(diagAsArray(3))
+    print('Diagonally Dominate Matrix')
+    printMatrix(diagDom(3))

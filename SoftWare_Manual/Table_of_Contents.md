@@ -21,4 +21,5 @@
 * [BackSolve.md](BackSolve.md) Backsolve an upper triangular system of equations.
 * [ForwardSolve.md](ForwardSolve.md) Forward Solve a lower triangular system of equations.
 * [RowReduce.md](RowReduce.md) Perform Gaussian elimination on a matrix. No Pivoting Strategies implemented yet.
+* [SystemSolve.md](SystemSolve.md) Solves a system of equations my doing a Gaussian elmination and then a back substitution. No pivoting strategies or dependencies on other routines.
 
