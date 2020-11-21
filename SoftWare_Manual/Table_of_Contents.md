@@ -27,6 +27,9 @@
 * [LUFactorization.md](LUFactorization.md) Performs an inplace LU factorization on a matrix.
 * [LUForwardSolve.md](LUForwardSolve.md) Does the forward solve of the lower part of an LU factorized matrix.
 
+### Utilities
+* [MatrixVectorMultiply.md](MatrixVectorMultiply.md) The multiplication of a matrix and a vector from the right.
+
 ### Misc
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.
 * [MatrixCreator.md](MatrixCreator.md) A suite of routines to create different types of matricies used for testing code.
