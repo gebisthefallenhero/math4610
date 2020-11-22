@@ -10,7 +10,7 @@ def scaledPartPiv(A,b):
     maxVec = maxVector(A)
     #The Row Reduction
     for k in range(rowLen - 1):
-        pivotRow = bestPivot(A,k,maxVec)
+        pivotRow = bestPivot(A,k,maxVec,map)
         map[k],map[pivotRow] = map[pivotRow], map[k]
         for i in range(k + 1, rowLen):
             factor = A[map[i]][k]/ A[map[k]][k]
@@ -22,12 +22,12 @@ def scaledPartPiv(A,b):
     for row in range(rowLen - 1, -1, -1):
         sum = b[map[row]]
         for column in range(row +1, rowLen):
-            sum -= A[map[row]][column] * xVec[map[row]]
+            sum -= A[map[row]][column] * xVec[column]
         xVec[row] = sum / A[map[row]][row]
     return xVec
 
 
-def bestPivot(A, column,maxVec):
+def bestPivot(A, column,maxVec,map):
     '''
     Returns the best pivot in a given column of A
     :param A: The matrix in question
@@ -36,8 +36,8 @@ def bestPivot(A, column,maxVec):
     '''
     maxPivotRow = 0
     maxPivot = 0
-    for row in range(len(A)):
-        pivot = abs(A[row][column] / maxVec[row])
+    for row in range(column,len(map)):
+        pivot = abs(A[map[row]][column] / maxVec[map[row]])
         if pivot > maxPivot:
             maxPivot = pivot
             maxPivotRow = row
@@ -70,3 +70,11 @@ if __name__ == '__main__':
     b = [591700,46.78]
     x = scaledPartPiv(test,b)
     printMatrix(x)
+
+    test2 = [
+        [1,2,-2],
+        [2,1,-5],
+        [1,-4,1]
+    ]
+    b = [-15,-21,18]
+    print(scaledPartPiv(test2,b))
