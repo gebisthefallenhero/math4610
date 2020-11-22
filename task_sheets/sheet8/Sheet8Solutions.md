@@ -16,7 +16,7 @@ For the code for this see [Solutions.py](Solutions.py). This did not go very wel
 That is not close at all to the all ones vector, so we will need better tools. The results for the larger Hilbert Matrices are similar.
 
 ### Task 4
-After much reading up on how the method works, lots of debugging, and a few grey hairs the fully functional code for scaled partial pivoting can be found [ScaledPartialPivoting.py](ScaledPartialPivoting.py). The entry for the software manual can be found [here](../../SoftWare_Manual/ScaledPartialPivoting). 
+After much reading up on how the method works, lots of debugging, and a few grey hairs the fully functional code for scaled partial pivoting can be found [ScaledPartialPivoting.py](ScaledPartialPivoting.py). The entry for the software manual can be found [here](../../SoftWare_Manual/ScaledPartialPivoting.md). 
 
 
 ### Task 5
