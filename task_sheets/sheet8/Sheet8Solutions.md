@@ -1,9 +1,9 @@
 # Sheet 8 Solutions
 
-Link to the [software manual](../../SoftWare_Manual/Table_of/Contents.md)
+Link to the [software manual](../../SoftWare_Manual/Table_of_Contents.md)
 
 ### Task 1
-See the code for the solving the system in [GaussianSolution.py](GaussianSolution.py). For the code to create a diagonally dominate matrix see the file [MatrixCreator.py](../../lib/MatrixCreator.py) For the software manual entry see [SystemsSolver.md](../../SoftWare_Manual/SystemsSolver.md). 
+See the code for the solving the system in [GaussianSolution.py](GaussianSolution.py). For the code to create a diagonally dominate matrix see the file [MatrixCreator.py](../../lib/MatrixCreator.py) For the software manual entry see [SystemsSolver.md](../../SoftWare_Manual/SystemsSolve.md). 
 
 ### Task 2
 See the code for this in [LUFactorization.py](LUFactorization.py). Also see the software manual entry for this found [here](../../SoftWare_Manual/LUFactorization.md) and [here](../../SoftWare_Manual/LUFactorization.md).
@@ -16,7 +16,7 @@ For the code for this see [Solutions.py](Solutions.py). This did not go very wel
 That is not close at all to the all ones vector, so we will need better tools. The results for the larger Hilbert Matrices are similar.
 
 ### Task 4
-After much reading up on how the method works, lots of debugging, and a few grey hairs the fully functional code for scaled partial pivoting can be found [ScaledPartialPivoting.py](ScaledPartialPivoting.py). The entry for the software manual can be found [here](../../SoftWare_Manual/LUFactorization.md). 
+After much reading up on how the method works, lots of debugging, and a few grey hairs the fully functional code for scaled partial pivoting can be found [ScaledPartialPivoting.py](ScaledPartialPivoting.py). The entry for the software manual can be found [here](../../SoftWare_Manual/ScaledPartialPivoting). 
 
 
 ### Task 5
