@@ -28,4 +28,8 @@ The vector for a Hilbert Matrix of size 4 using Scaled Partial Pivoting is
 ```
 This is much closer to the all ones vector. Happy day. For Hilbert Matrices of size 5 - 10 run the code in the solutions file mentioned in task 3. The results are similar as the 4x4 case.
 
+### Task 6
+Interestingly enough the first site I visited mentioned that a distinguishing charcteristic of the Hilbert Matrix is that it is difficult to invert via numerical techniques. Indeed another site mentioned that the condition number of this matrix grows very quickly with the size of the matrix. Interestly enough there is an explicit formula for element of the inverse of a Hilbert Matrix, but it is a little complicated, and it is probably better just to do scaled partial pivotingto compute the action of the inverse on a vector. 
 
+https://mathworld.wolfram.com/HilbertMatrix.html
+https://nhigham.com/2020/06/30/what-is-the-hilbert-matrix/
