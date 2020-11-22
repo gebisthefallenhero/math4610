@@ -4,3 +4,15 @@ Link to the [software manual](../../SoftWare_Manual/Table_of/Contents.md)
 
 ### Task 1
 See the code for the solving the system in [GaussianSolution.py](GaussianSolution.py). For the code to create a diagonally dominate matrix see the file [MatrixCreator.py](../../lib/MatrixCreator.py) For the software manual entry see [SystemsSolver.md](../../SoftWare_Manual/SystemsSolver.md). 
+
+### Task 2
+See the code for this in [LUFactorization.py](LUFactorization.py). Also see the software manual entry for this found [here](../../SoftWare_Manual/LUFactorization.md) and [here](../../SoftWare_Manual/LUFactorization.md).
+
+### Task 3
+For the code for this see [Solutions.py](Solutions.py). This did not go very well in any of the cases. As an example here is the solution vector for the hilbert matrix of size 5
+```
+ [2.122109175659351, 0.30630116952138, 0.023403554016844637, 0.0010714123744737227, 2.2675736961437834e-05]
+```
+That is not close at all to the all ones vector, so we will need better tools.
+
+

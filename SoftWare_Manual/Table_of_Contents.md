@@ -26,6 +26,7 @@
 * [SystemSolve.md](SystemSolve.md) Solves a system of equations my doing a Gaussian elmination and then a back substitution. No pivoting strategies or dependencies on other routines.
 * [LUFactorization.md](LUFactorization.md) Performs an inplace LU factorization on a matrix.
 * [LUForwardSolve.md](LUForwardSolve.md) Does the forward solve of the lower part of an LU factorized matrix.
+* [ScaledPartialPivoting.md](ScaledPartialPivoting.md) Solves a system of equations using scaled partial pivoting. If a solution exists, this will find it.
 
 ### Utilities
 * [MatrixVectorMultiply.md](MatrixVectorMultiply.md) The multiplication of a matrix and a vector from the right.

@@ -11,7 +11,7 @@ def matVecMult(A,v):
     for row in range(numRows):
         sum = 0
         for entry in range(vecLength):
-            sum += v[entry] * A[row][entry]
+            sum += vec[entry] * A[row][entry]
         newVec.append(sum)
     return newVec
 
