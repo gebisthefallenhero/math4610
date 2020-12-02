@@ -4,7 +4,7 @@ def l1Norm(v):
     '''
     sum = 0
     for i in range(len(v)):
-        sum += v[i]
+        sum += abs(v[i])
     return sum
 
 if __name__ == "__main__":
