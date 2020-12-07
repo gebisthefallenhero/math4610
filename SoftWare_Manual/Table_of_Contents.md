@@ -40,7 +40,7 @@
 ### Vector Norms
 * [L1 Norm](L1Norm.md) Calculate the L1 Norm of a vector.
 * [L2 Norm](L2Norm.md) Calculate the L2 Norm of a vector.
-* [Infinity Norm](LinftyNorm.md) Calulate the infinity norm of a vector.
+* [Infinity Norm](Linfty.md) Calulate the infinity norm of a vector.
 * [L1 vec difference](L1Error.md) Calculate the L1 Norm of the difference of two vectors.
 * [L2 vec difference](L2Error.md) Calculate the L2 Norm of the difference of two vectors.
 * [Infinity vec difference](LInftyError.md) Calculat the Infinity Norm of the difference of two vectors.
