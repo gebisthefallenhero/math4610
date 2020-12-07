@@ -1,6 +1,6 @@
 
 
-# L Infinity Norm Norm
+# L Infinity Norm 
 
 **Routine Name:** lInftyNorm
 
