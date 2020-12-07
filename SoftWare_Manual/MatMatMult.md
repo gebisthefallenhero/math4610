@@ -31,7 +31,6 @@ if __name__ == "__main__":
             [1,2,3],
             [4,5,6],
         ]
-            
     print(matMatMult(A,B))
 
 
@@ -40,18 +39,25 @@ if __name__ == "__main__":
 This code prints out
 
 ```
-[[0, 1, 2], [2, 3, 4], [4, 5, 6]]
+[[8, 10, 12], [4, 5, 6], [0, 0, 0]]
 ```
 **Implementation/Code:** 
 Here is the implemenation for the routine.
 ```
-def matSub(A,B):
+def matMatMult(A,B):
     '''
-    A,B the matricies to be subtracted in the order A - B 
+    A,B The matricies to be multiplied as A * B 
+    Checking dimensions is left to user.
     '''
-    for i in range(len(A)):
-        for j in range(len(B)):
-            A[i][j]= A[i][j] - B[i][j]
-    return A
+    toReturn = []
+    for k in range(len(A)):
+        newRow = []
+        for i in range(len(A)): #
+            sum = 0
+            for j in range(len(B)): # For the number of entries in a column of B
+                sum += A[k][j] * B[j][i]
+            newRow.append(sum)
+        toReturn.append(newRow)
+    return toReturn
 ```
 **Last Modified:** December/2020

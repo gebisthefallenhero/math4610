@@ -1,6 +1,6 @@
-# Sheet8 Solutions
+# Sheet9 Solutions
 
-For all tasks see the [table of contents](../../SoftWare_Manual/Table_of_Contents.md) For the software manual entries.
+For all tasks see the [table of contents](../../SoftWare_Manual/Table_of_Contents.md) of the software manual for the software manual entries.
 
 ### Task 1
 * [vector addition](VecAdd.py)

@@ -29,32 +29,30 @@
 * [ScaledPartialPivoting.md](ScaledPartialPivoting.md) Solves a system of equations using scaled partial pivoting. If a solution exists, this will find it.
 
 
-* [MatrixVectorMultiply.md](MatrixVectorMultiply.md) The multiplication of a matrix and a vector from the right.
 
 ### Vector Multiplication
-* [vector addition](VecAdd.py)
-* [vector subtraction](VecSub.py)
-* [Scalar Multiplication](ScalMult.py)
-* [Dot Product](DotProd.py)
-* [Outer Product](OuterProd.py)
+* [vector addition](VecAdd.md) Adds two vectors.
+* [vector subtraction](VecSub.md) Subtracts two vectors.
+* [Scalar Multiplication](ScalMult.md) Multiply a vector by a scalar.
+* [Dot Product](DotProd.md) Pefroms the dot product of two vectors.
+* [Outer Product](OuterProd.md) Performs the outer product of two vectors.
 
-### Task 2
-* [L1 Norm](L1Norm.py)
-* [L2 Norm](L2Norm.py)
-* [Infinity Norm](LinftyNorm.py)
-* [L1 vec difference](L1Error.py)
-* [L2 vec difference](L2Error.py)
-* [Infinity vec difference](LInftyError.py)
+### Vector Norms
+* [L1 Norm](L1Norm.md) Calculate the L1 Norm of a vector.
+* [L2 Norm](L2Norm.md) Calculate the L2 Norm of a vector.
+* [Infinity Norm](LinftyNorm.md) Calulate the infinity norm of a vector.
+* [L1 vec difference](L1Error.md) Calculate the L1 Norm of the difference of two vectors.
+* [L2 vec difference](L2Error.md) Calculate the L2 Norm of the difference of two vectors.
+* [Infinity vec difference](LInftyError.md) Calculat the Infinity Norm of the difference of two vectors.
 
 ### Task 3
-* [Matrix Addition](MatAdd.py)
-* [Matrix Subtraction](MatSub.py)
-* [Matrix times a scalar](MatScal.py)
-* [Matrix Transpose](../sheet7/Transpose.py)
-* [Matrix Vector left multiplication](MatVecMult.py)
-* [Matrix Matrix Multiplication](MatMatMult.py)
+* [Matrix Addition](MatAdd.md) Adds two matrices.
+* [Matrix Subtraction](MatSub.md) Subtract two matrices.
+* [Matrix times a scalar](MatScal.md) Scale a matrix.
+* [Transpose.md](Transpose.md) Transpose a matrix
+* [MatrixVectorMultiply.md](MatrixVectorMultiply.md) The multiplication of a matrix and a vector from the right.
+* [Matrix Matrix Multiplication](MatMatMult.md) Multiply two matricies. 
 
 ### Misc
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.
 * [MatrixCreator.md](MatrixCreator.md) A suite of routines to create different types of matricies used for testing code.
-* [Transpose.md](Transpose.md) Transpose a matrix
