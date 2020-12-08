@@ -27,8 +27,7 @@
 * [LUFactorization.md](LUFactorization.md) Performs an inplace LU factorization on a matrix.
 * [LUForwardSolve.md](LUForwardSolve.md) Does the forward solve of the lower part of an LU factorized matrix.
 * [ScaledPartialPivoting.md](ScaledPartialPivoting.md) Solves a system of equations using scaled partial pivoting. If a solution exists, this will find it.
-
-
+* [Jacobi Iteration](Jacobi.md) Solves a system of equations using jacobi iteration.
 
 ### Vector Multiplication
 * [vector addition](VecAdd.md) Adds two vectors.
@@ -45,7 +44,7 @@
 * [L2 vec difference](L2Error.md) Calculate the L2 Norm of the difference of two vectors.
 * [Infinity vec difference](LInftyError.md) Calculat the Infinity Norm of the difference of two vectors.
 
-### Task 3
+### Matrix Operations
 * [Matrix Addition](MatAdd.md) Adds two matrices.
 * [Matrix Subtraction](MatSub.md) Subtract two matrices.
 * [Matrix times a scalar](MatScal.md) Scale a matrix.
