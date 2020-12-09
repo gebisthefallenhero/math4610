@@ -36,13 +36,15 @@
 * [Dot Product](DotProd.md) Pefroms the dot product of two vectors.
 * [Outer Product](OuterProd.md) Performs the outer product of two vectors.
 
-### Vector Norms
+### Vector and Matrix Norms
 * [L1 Norm](L1Norm.md) Calculate the L1 Norm of a vector.
 * [L2 Norm](L2Norm.md) Calculate the L2 Norm of a vector.
 * [Infinity Norm](Linfty.md) Calulate the infinity norm of a vector.
 * [L1 vec difference](L1Error.md) Calculate the L1 Norm of the difference of two vectors.
 * [L2 vec difference](L2Error.md) Calculate the L2 Norm of the difference of two vectors.
 * [Infinity vec difference](LInftyError.md) Calculat the Infinity Norm of the difference of two vectors.
+* [Matrix 1 Norm](L1MatNorm.md) Calculates the 1 norm of a matrix.
+* [Matrix Infinity Norm](MatInftyNorm.md) Calculates the maximum norm of a matrix.
 
 ### Matrix Operations
 * [Matrix Addition](MatAdd.md) Adds two matrices.
@@ -51,6 +53,11 @@
 * [Transpose.md](Transpose.md) Transpose a matrix
 * [MatrixVectorMultiply.md](MatrixVectorMultiply.md) The multiplication of a matrix and a vector from the right.
 * [Matrix Matrix Multiplication](MatMatMult.md) Multiply two matricies. 
+
+
+
+### EigenValues
+* [PowerMethod.md](PowerIter.md) Returns the largest eigenvalue.
 
 ### Misc
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.
