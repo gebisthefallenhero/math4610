@@ -10,3 +10,11 @@ if __name__ == '__main__':
     tol = .001
     print(powerIter(A,ones,tol))
 ```
+
+### Task 2
+
+### Task 3
+See the code [Matrix1Norm.py](Matrix1Norm.py) as well as the entry under vector and matrix norms in the [software manual](../../SoftWare_Manual/Table_of_Contents.md)
+
+### Task 4
+See the code [matInftyNorm.py](matInfty1Norm.py) as well as the entry under vector and matrix norms in the [software manual](../../SoftWare_Manual/Table_of_Contents.md)
