@@ -1,6 +1,7 @@
 from MatVecMult import matVecMult
 from L2Norm import l2Norm
 from DotProd import dotProd
+from ScaledPartialPivoting import scaledPartPiv
 def inverPowIter(A,x_0,tol,maxIter=100):
     '''
     Returns the smallest eigenvalue of a matrix
@@ -13,15 +14,24 @@ def inverPowIter(A,x_0,tol,maxIter=100):
     error = 10.0 * tol
     iter = 0
     l_0 = 0 #The lambda approximation
-
+    y = x_0
     while (error > tol and iter < maxIter):
-        iter += 1
-        z = matVecMult(A,y)
-        normZ = l2Norm(z)
-        w = [z[i] / normZ for i in range(len(z)) ]
-        u = matVecMult(A,w)
-        l_1 = dotProd(w,u)/dotProd(w,w)
+        v = scaledPartPiv(A,y)
+        normV = l2Norm(v)
+        v = [v[i] / normV for i in range(len(v))]
+        z = scaledPartPiv(A,v)
+        l_1 = dotProd(v,z)
         error = abs(l_1 - l_0)
         l_0 = l_1
-        y = w
-    return l_0
+        y = v
+        iter += 1
+    return l_0,z
+
+if __name__ == '__main__':
+    A = [
+        [0,1],
+        [-2,-3]
+    ]
+    x_0 = [1,1]
+    tol = .001
+    print(inverPowIter(A,x_0,tol))

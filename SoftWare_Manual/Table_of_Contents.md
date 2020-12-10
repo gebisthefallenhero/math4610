@@ -57,7 +57,8 @@
 
 
 ### EigenValues
-* [PowerMethod.md](PowerIter.md) Returns the largest eigenvalue.
+* [PowerMethod.md](PowerIter.md) Returns the largest eigenvalue and vector.
+* [InverserPowerIter.md](InversePowerIter.md) Returns the smallest eigenvalue and vector.
 
 ### Misc
 * [LinearRegression.md](LinearRegression.md) Perform a linear regression.

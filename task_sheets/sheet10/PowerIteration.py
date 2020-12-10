@@ -15,16 +15,16 @@ def powerIter(A,x_0,tol,maxIter=1000):
     l_0 = 0 #The lambda approximation
     y = x_0
     while (error > tol and iter < maxIter):
-        iter += 1
-        z = matVecMult(A,y)
-        normZ = l2Norm(z)
-        w = [z[i] / normZ for i in range(len(z)) ]
-        u = matVecMult(A,w)
-        l_1 = dotProd(w,u)
+        v = matVecMult(A,y)
+        normV = l2Norm(v)
+        v = [v[i] / normV for i in range(len(v))]
+        z = matVecMult(A,v)
+        l_1 = dotProd(v,z)
         error = abs(l_1 - l_0)
         l_0 = l_1
-        y = w
-    return l_0,w
+        y = v
+        iter += 1
+    return l_0,z
 
 if __name__ == '__main__':
     A = [
