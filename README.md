@@ -14,3 +14,5 @@ This repository contains the projects and solutions to the homework for math 461
 * [Task Sheet Eight Solutions](task_sheets/sheet8/Sheet8Solutions.md)
 * [Task Sheet Nine Solutions](task_sheets/sheet9/Sheet9Solutions.md)
 * [Task Sheet Ten Solutions](task_sheets/sheet10/Sheet10Solutions.md)
+* [Task Sheet Eleven Solutions](task_sheets/sheet11/Sheet11Solutions.md) Just the internet search.
+* [Task Sheet Twelve Solutions](task_sheets/sheet12/Sheet12Solutions.md) Just the internet search.
