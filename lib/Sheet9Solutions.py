@@ -9,8 +9,8 @@ def diagDomSymmetric(size):
     :param size The size of the matrix.
     :return: The random matrix
     '''
-    START_VALUE = 0
-    END_VALUE = 20
+    START_VALUE = 1
+    END_VALUE = 5
     matrix = []
     #initialize a random matrix
     for i in range(size):
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     A = diagDomSymmetric(100)
     b = matVecMult(A,ones)
     x_0 = [0 for i in range(100)]
-    jacobiGuess = jacobiIteration(A,b,x_0,.001)
+    jacobiGuess = jacobiIteration(A,x_0,b,.00001)
     scaledGuess = scaledPartPiv(A,b)
     jacobiError = l2Error(ones,jacobiGuess)
     scaledError = l2Error(ones,scaledGuess)

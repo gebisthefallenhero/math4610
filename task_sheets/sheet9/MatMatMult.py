@@ -4,11 +4,14 @@ def matMatMult(A,B):
     Checking dimensions is left to user.
     '''
     toReturn = []
-    for i in range(len(A)): #For every row of A
-        sum = 0
-        for j in range(len(B)): # For the number of entries in a column of B
-            sum += A[i][j] * B[j][i]
-        toReturn.append(sum)
+    for k in range(len(A)):
+        newRow = []
+        for i in range(len(A)): #
+            sum = 0
+            for j in range(len(B)): # For the number of entries in a column of B
+                sum += A[k][j] * B[j][i]
+            newRow.append(sum)
+        toReturn.append(newRow)
     return toReturn
 
     
@@ -24,7 +27,4 @@ if __name__ == "__main__":
             [1,2,3],
             [4,5,6],
         ]
-
-    
-            
     print(matMatMult(A,B))

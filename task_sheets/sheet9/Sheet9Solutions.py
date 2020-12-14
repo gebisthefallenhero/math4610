@@ -41,5 +41,4 @@ if __name__ == '__main__':
     scaledGuess = scaledPartPiv(A,b)
     jacobiError = l2Error(ones,jacobiGuess)
     scaledError = l2Error(ones,scaledGuess)
-    print(jacobiGuess)
     print(f"The Jacobi error is {jacobiError} and the backSub error is {scaledError}")

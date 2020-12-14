@@ -31,7 +31,7 @@ For the code see [JacobiIteration.py](JacobiIteration.py). For the software manu
 ### Task 5
 For the code see [here](Sheet9Solutions.py). This is what the code printed out
 ```
-The Jacobi error is 0.34243385020750805 and the backSub error is 8.150882121683646e-15
+The Jacobi error is 0.35429264940976846 and the backSub error is 8.172779940709304e-15
 
 ```
 Clearly the back subsitution does a much better job, but the Jacobi error isn't bad either.
