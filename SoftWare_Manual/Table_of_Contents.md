@@ -45,6 +45,7 @@
 * [Infinity vec difference](LInftyError.md) Calculat the Infinity Norm of the difference of two vectors.
 * [Matrix 1 Norm](L1MatNorm.md) Calculates the 1 norm of a matrix.
 * [Matrix Infinity Norm](MatInftyNorm.md) Calculates the maximum norm of a matrix.
+* [Condition Number](ConditionNumber.md) Calculates the condition number of a marix.
 
 ### Matrix Operations
 * [Matrix Addition](MatAdd.md) Adds two matrices.

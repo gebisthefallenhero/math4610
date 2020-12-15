@@ -69,6 +69,6 @@ def inverPowIter(A,x_0,tol,maxIter=100):
         l_0 = l_1
         y = v
         iter += 1
-    return l_0,v
+    return 1 / l_0,v
 ```
 **Last Modified:** December/2020
