@@ -1,7 +1,7 @@
 # Sheet 10 Solutions
 
 ### Task 1
-See the file [PowerIteration.py](PowerIteration.py). Also see the software manual entry [here](../../SoftWare_Manual/PowerIter.py). I will post the code used below to test on the 100 x 100 matrix, which seemed to work fine. Also see the code [Sheet10Solutions.py](Sheet10Solutions.py)
+See the file [PowerIteration.py](PowerIteration.py). Also see the software manual entry [here](../../SoftWare_Manual/PowerIter.md). I will post the code used below to test on the 100 x 100 matrix, which seemed to work fine. Also see the code [Sheet10Solutions.py](Sheet10Solutions.py)
 
 ```
 if __name__ == '__main__':
@@ -44,7 +44,7 @@ The condition number is 1.2369546761056278
 ```
 
 ### Task 6 
-One website defined a condition number as measuring the sensativity of a solution to small pertubations on input data. The bigger the condition number the more senitive it is. It also often came up that the condition number is not defined in terms of the eigenvalue of the matrix, but in terms of the singular values. Thi gives an alternative way to compute it.
+One website defined a condition number as measuring the sensativity of a solution to small pertubations on input data. The bigger the condition number the more senitive it is. It also often came up that the condition number is not defined in terms of the eigenvalue of the matrix, but in terms of the singular values. The gives an alternative way to compute it. Addtionally I learned that the condition number is not an idea unique to numerical linear algebra, but it is also something used in most areas of numerical analysis. 
 
 https://nhigham.com/2020/03/19/what-is-a-condition-number/
 https://www.cmpe.boun.edu.tr/~cemgil/Courses/cmpe482/slides/Lecture12.pdf
